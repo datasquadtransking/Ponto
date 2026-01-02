@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponto Transking</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #e9ecef; display: flex; justify-content: center; padding: 20px; }
+        .card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 100%; max-width: 400px; }
+        h2 { color: #004a99; text-align: center; margin-bottom: 20px; }
+        label { font-weight: 600; display: block; margin-top: 12px; color: #333; }
+        input { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        .row { display: flex; gap: 10px; }
+        .row div { flex: 1; }
+        button { width: 100%; padding: 12px; margin-top: 20px; background: #004a99; color: white; border: none; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; }
+        button:hover { background: #003366; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Transking - Ponto</h2>
+        <form action="/registrar" method="post">
+            <label>Nome Completo</label>
+            <input type="text" name="nome" required>
+            
+            <label>CPF</label>
+            <input type="text" name="cpf" placeholder="000.000.000-00" required>
+
+            <div class="row">
+                <div>
+                    <label>Entrada</label>
+                    <input type="time" name="entrada" required>
+                </div>
+                <div>
+                    <label>Saída Almoço</label>
+                    <input type="time" name="saida_almoco" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div>
+                    <label>Retorno Almoço</label>
+                    <input type="time" name="retorno_almoco" required>
+                </div>
+                <div>
+                    <label>Saída Final</label>
+                    <input type="time" name="saida_final" required>
+                </div>
+            </div>
+            
+            <button type="submit">Enviar para o RH</button>
+        </form>
+    </div>
+</body>
+</html>
